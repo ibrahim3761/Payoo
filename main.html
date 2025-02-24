@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo</title>
+    <!-- daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-slate-800 m-0">
+    <section class="max-w-md min-h-screen mx-auto p-6 bg-gray-200">
+      <header>
+        <nav class="flex justify-around items-center">
+          <img class="w-16" src="assets/Group.png" alt="" />
+          <div>
+            <h1 class="text-3xl font-bold">$ <span id="main-bal">4500</span></h1>
+            <p>Availble Balance</p>
+          </div>
+          <button
+            class="gap-2 border-2 flex justify-between items-center px-2 py-2 rounded-lg text-sm font-medium cursor-pointer"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_11_2930)">
+                <path
+                  d="M8.33333 6.66659V4.99992C8.33333 4.55789 8.50892 4.13397 8.82148 3.82141C9.13404 3.50885 9.55797 3.33325 9.99999 3.33325H15.8333C16.2754 3.33325 16.6993 3.50885 17.0118 3.82141C17.3244 4.13397 17.5 4.55789 17.5 4.99992V14.9999C17.5 15.4419 17.3244 15.8659 17.0118 16.1784C16.6993 16.491 16.2754 16.6666 15.8333 16.6666H9.99999C9.55797 16.6666 9.13404 16.491 8.82148 16.1784C8.50892 15.8659 8.33333 15.4419 8.33333 14.9999V13.3333"
+                  stroke="#666768"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12.5 10H2.5L5 7.5"
+                  stroke="#666768"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5 12.5L2.5 10"
+                  stroke="#666768"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_11_2930">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            Logout
+          </button>
+        </nav>
+
+        <section class="mt-10">
+          <h1 class="text-2xl font-bold mb-2">🔥 Welcome to Payooo!</h1>
+          <p class="opacity-50">
+            Enjoy easy and convenient financial services with us. Cashout charge
+            is low and
+          </p>
+        </section>
+
+        <div class="cards grid grid-cols-3 gap-2 mt-14">
+          <div class="cursor-pointer border p-4 text-center rounded-lg">
+            <img class="w-8 mx-auto" src="assets/wallet.png" alt="" />
+            <h3>Add Money</h3>
+          </div>
+          <div class="cursor-pointer border p-4 text-center rounded-lg">
+            <img class="w-8 mx-auto" src="assets/cashout.png" alt="" />
+            <h3>Cashout</h3>
+          </div>
+          <div class="cursor-pointer border p-4 text-center rounded-lg">
+            <img class="w-8 mx-auto" src="assets/transfer.png" alt="" />
+            <h3>Transfer Money</h3>
+          </div>
+          <div class="cursor-pointer border p-4 text-center rounded-lg">
+            <img class="w-8 mx-auto" src="assets/getbonus.png" alt="" />
+            <h3>Get Bonus</h3>
+          </div>
+          <div class="cursor-pointer border p-4 text-center rounded-lg">
+            <img class="w-8 mx-auto" src="assets/payBill.png" alt="" />
+            <h3>Pay Bill</h3>
+          </div>
+          <div class="cursor-pointer border p-4 text-center rounded-lg">
+            <img class="w-8 mx-auto" src="assets/Transaction.png" alt="" />
+            <h3>Transaction</h3>
+          </div>
+        </div>
+
+        <section class="mt-10">
+          <h2 class="text-2xl font-bold">Add money</h2>
+          <div class="">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="card w-full max-w-sm shrink-0 shadow-2xl">
+                <div class="card-body">
+                  <select class="select">
+                    <legend>Select Bank</legend>
+                    <option disabled selected>Select Bank</option>
+                    <option value="Bkash">Bkash</option>
+                    <option value="Nagad">Nagad</option>
+                    <option value="Rocket">Rocket</option>
+                    <option>Visa</option>
+                  </select>
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label">Amount</label>
+                    <input id="acc-amount" type="number" class="input" placeholder="Enter Amount" required/>
+                    <label class="fieldset-label">Account Number</label>
+                    <input value="01887383971" id="acc-num" type="number" class="input" placeholder="Enter your account number" required/>
+                    <label class="fieldset-label">4 Digit Pin</label>
+                    <input value="1234" id="pin-num" type="text" class="input" placeholder="Enter 4 Digit Pin" required/>
+                    <button id="add-money" class="btn border-none  btn-neutral mt-4 bg-blue-700">Add Money</button>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </header>
+    </section>
+
+    <script src="Script/add-money.js"></script>
+  </body>
+</html>
