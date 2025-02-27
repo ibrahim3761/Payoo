@@ -2,17 +2,14 @@ document
   .getElementById("add-money")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    const accAmount = document.getElementById("acc-amount").value;
-    const conAmount = parseFloat(accAmount);
-    const pin = document.getElementById("pin-num").value;
-    const conPin = parseInt(pin);
-    const mainBal = document.getElementById("main-bal").innerText;
-    const conBal = parseFloat(mainBal);
-    
-    if (conPin && accAmount) {
-      if (conPin === 1234) {
-        const sum = conBal + conAmount;
-        document.getElementById("main-bal").innerText = sum;
+    const accAmount = getInputBYID("acc-amount");
+    const pin = getInputBYID("pin-num");
+    const mainBal = getInnerTextByID("main-bal");
+    const accNum= document.getElementById("acc-num").value;
+    if (pin && accAmount && accNum.length === 11) {
+      if (pin === 1234) {
+        const sum = mainBal + accAmount;
+        updateBalance("main-bal", sum);
         document.getElementById("acc-amount").value = "";
       }
       else {
@@ -20,6 +17,6 @@ document
       }
     } 
     else {
-      alert("Enter Amount and Pin");
+      alert("Enter Correct Account number with cash amount and Pin");
     }
   });
